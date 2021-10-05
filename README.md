@@ -19,4 +19,18 @@ The hardware combines IMU and HBC sensing modality on a cutomised board, with ES
 
 A TV-Wall assembling and disassembling activity including both collaborative and non-collaborative activities.
 
-The classification result with both IMU and HBC sensing are stated in our manuscript "Human Body Capacitance: a Novel Wearable Motion Sensing Approach Besides IMU and its Contribution to Human Activity Recognition". 
+
+# Classifcation Result Example
+
+
+<img width="546" alt="Screenshot 2021-10-05 at 14 22 43" src="https://user-images.githubusercontent.com/12549420/136021710-d045e318-1fff-47cc-8626-19b3f9f696c9.png">
+
+Gym Exercise classification result with sensing units on different body locations.
+
+<img width="292" alt="Screenshot 2021-10-05 at 14 23 21" src="https://user-images.githubusercontent.com/12549420/136021780-874b06c1-089b-4d96-9c78-fdc670fe4bfe.png">
+
+TV-Wall building activities classification result with different configuration of sensing modalities.
+
+
+
+More detailed classification result with both IMU and HBC sensing and the separates are stated in our manuscript "Human Body Capacitance: a Novel Wearable Motion Sensing Approach Besides IMU and its Contribution to Human Activity Recognition". 
