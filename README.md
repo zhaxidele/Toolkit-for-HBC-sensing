@@ -4,10 +4,12 @@ More detailed description could be found in our published paper:
 
 1, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
 Available at: https://abc-research.github.io/
+
 Share and cite: 
 
 2, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
 Available at: https://www.computer.org/csdl/magazine/pc
+
 Share and cite: 
 
 
