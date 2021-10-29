@@ -2,12 +2,22 @@
 This repository supplyies the basic concept of human body capacitance sening and the hardware platform, the firmware, the collected datasets from experiments that combines HBC sensing and IMU sensing for human activity recognition, and the used machine learning algorithms for human activity classification. 
 More detailed description could be found in our published paper:
 
-1, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
+
+
+1， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
+
+Available at: https://bodynets.eai-conferences.org/2021/accepted-papers/
+
+Share and cite:
+
+2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
+
 Available at: https://abc-research.github.io/
 
 Share and cite: 
 
-2, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
+3, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
+
 Available at: https://www.computer.org/csdl/magazine/pc
 
 Share and cite: 
