@@ -18,7 +18,7 @@ Share and cite:
 
 3, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
 
-Available at: https://www.computer.org/csdl/magazine/pc
+Available at: to be determined
 
 Share and cite: 
 
