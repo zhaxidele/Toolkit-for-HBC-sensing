@@ -1,9 +1,6 @@
 # Toolkit-for-HBC-sensing
 This repository supplyies the basic concept of human body capacitance sening and the hardware platform, the firmware, the collected datasets from experiments that combines HBC sensing and IMU sensing for human activity recognition, and the used machine learning algorithms for human activity classification. 
 
-
-# selected figures:
-
 ---Hardware
 
 <img width="266" alt="Board_1" src="https://user-images.githubusercontent.com/12549420/136019960-b8bdf3e0-5ddf-455c-8c63-4a171c2dda4a.png" >
