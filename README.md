@@ -25,7 +25,7 @@ A TV-Wall assembling and disassembling activity including both collaborative and
 
 <img width="600" alt="Screenshot 2021-10-05 at 14 22 43" src="https://user-images.githubusercontent.com/12549420/136021710-d045e318-1fff-47cc-8626-19b3f9f696c9.png" >
 
-Gym Exercise classification result with sensing units on different body locations.
+Gym Exercise classification result with sensing units on different body locations(leg, pocket, and wrist).
 
 <img width="292" alt="Screenshot 2021-10-05 at 14 23 21" src="https://user-images.githubusercontent.com/12549420/136021780-874b06c1-089b-4d96-9c78-fdc670fe4bfe.png" >
 
@@ -43,6 +43,7 @@ TV-Wall building activities classification result with different configuration o
 Available at: https://link.springer.com/chapter/10.1007/978-3-030-95593-9_20
 
 Share and cite:
+
 @inproceedings{bian2021systematic,
   title={A systematic study of the influence of various user specific and environmental factors on wearable human body capacitance sensing},
   author={Bian, Sizhen and Lukowicz, Paul},
@@ -55,9 +56,10 @@ Share and cite:
 
 2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
 
-Available at: [https://abc-research.github.io/](https://link.springer.com/chapter/10.1007/978-981-19-0361-8_5)
+Available at: https://link.springer.com/chapter/10.1007/978-981-19-0361-8_5
 
 Share and cite: 
+
 @incollection{bian2022using,
   title={Using human body capacitance sensing to monitor leg motion dominated activities with a wrist worn device},
   author={Bian, Sizhen and Yuan, Siyu and Rey, Vitor Fortes and Lukowicz, Paul},
