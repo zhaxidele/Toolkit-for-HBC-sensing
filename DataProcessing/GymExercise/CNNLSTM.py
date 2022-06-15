@@ -1,5 +1,4 @@
 
-#import matplotlib.pyplot as plt
 import csv
 import os
 import fnmatch
@@ -53,14 +52,7 @@ from keras.backend.tensorflow_backend import set_session
 import tensorflow as tf
 
 
-Header_9 = ["LocalSerie", "Win_Num", "Win_In_Num", "Object", "Day", "Workout", "Workout_time", "Position", "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "C_1"]
-
-Name_dic = {1:'Chentianyu', 2:'Cuihaiyang', 3:'Dangfeng', 4:'Hanyue', 5:'Songshiqi', 6:'Wangxueying', 7:'Yanzehui', 8:'Yujia', 9:'Zhangyu', 10:'Zhangzeyu', 11:'Test'}
-Name_dic_r = {'Chentianyu':1, 'Cuihaiyang':2, 'Dangfeng':3, 'Hanyue':4, 'Songshiqi':5, 'Wangxueying':6, 'Yanzehui':7, 'Yujia':8, 'Zhangyu':9, 'Zhangzeyu':10, 'Test':11}
-
-Workout = {1:"Adductor",2:"ArmCurl",3:"BenchPress",4:"LegCurl",5:"LegPress",6:"Riding",7:"RopeSkipping",8:"Running",9:"SquatConcrete",10:"SquatRubber",11:"SquatWood",12:"StairClimber",13:"Walking"}
-Workout_1 = {1:"Adductor",2:"ArmCurl",3:"BenchPress",4:"LegCurl",5:"LegPress",6:"Riding",7:"RopeSkipping",8:"Running",9:"Squat",10:"StairClimber",11:"Walking",12:"Null"}
-Workout_r_2 = {"Adductor":1, "ArmCurl":2, "BenchPress":3, "LegCurl":4,"LegPress":5, "Null":6, "Riding":7, "RopeSkipping":8, "Running":9, "Squat":10, "StairClimber":11, "Walking":12}
+Header = ["Object", "Day", "Workout", "Sensor_Position", "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "Body_Capacitance"]
 
 Position = {1:"leg",2:"pocket",3:"wrist"}
 
@@ -154,8 +146,8 @@ def Xy_TrainTest(file, fold_n):
     train = train.reset_index()
     test = test.reset_index()
 
-    train = train.drop(["LocalSerie", "Win_Num", "Win_In_Num", "Object", "Day", "Workout_time", "Position"], axis=1)
-    test = test.drop(["LocalSerie", "Win_Num", "Win_In_Num", "Object","Day", "Workout_time", "Position"], axis=1)
+    train = train.drop(["Object", "Day", "Sensor_Position"], axis=1)
+    test = test.drop(["Object","Day", "Sensor_Position"], axis=1)
 
     print(train.shape)
     print(test.shape)
@@ -211,62 +203,7 @@ def create_dataset(dataset_x, dataset_y, look_back):
         dataX.append(a)
         dataY.append(dataset_y[i + look_back -1])
     return np.array(dataX), np.array(dataY)
-
-
-class DataGenerator(keras.utils.Sequence):
-    'Generates data for Keras'
-    def __init__(self, list_IDs, train, labels, batch_size=32, dim=(32,32,32), n_channels=1,
-                 n_classes=10, shuffle=True):
-        'Initialization'
-        self.dim = dim
-        self.batch_size = batch_size
-        self.train = train
-        self.labels = labels
-        self.list_IDs = list_IDs
-        self.n_channels = n_channels
-        self.n_classes = n_classes
-        self.shuffle = shuffle
-        self.on_epoch_end()
-
-    def __len__(self):
-        'Denotes the number of batches per epoch'
-        return int(np.floor(len(self.list_IDs) / self.batch_size))
-
-    def __getitem__(self, index):
-        'Generate one batch of data'
-        # Generate indexes of the batch
-        indexes = self.indexes[index*self.batch_size:(index+1)*self.batch_size]
-
-        # Find list of IDs
-        list_IDs_temp = [self.list_IDs[k] for k in indexes]
-
-        # Generate data
-        X, y = self.__data_generation(list_IDs_temp)
-
-        return X, y
-
-    def on_epoch_end(self):
-        'Updates indexes after each epoch'
-        self.indexes = np.arange(len(self.list_IDs))
-        if self.shuffle == True:
-            np.random.shuffle(self.indexes)
-
-    def __data_generation(self, list_IDs_temp):
-        'Generates data containing batch_size samples' # X : (n_samples, *dim, n_channels)
-        # Initialization
-        X = np.empty((self.batch_size, *self.dim))
-        y = np.empty((self.batch_size), dtype=int)
-
-        # Generate data
-        for i, ID in enumerate(list_IDs_temp):
-            # Store sample
-            #X[i,] = np.load('data/' + ID + '.npy')
-            X[i,] = self.train[ID]
-            # Store class
-            y[i] = self.labels[ID]
-
-        return X, keras.utils.to_categorical(y-1, num_classes=self.n_classes)
-
+  
 
 #######  sample weigth
 def generate_sample_weights(training_data, class_weight_dictionary):
@@ -274,7 +211,6 @@ def generate_sample_weights(training_data, class_weight_dictionary):
     return np.asarray(sample_weights)
 
 def read_save():
-
 
     for k in range(1,2):  ##Position
 
@@ -317,7 +253,6 @@ def read_save():
                     #d_class_weights = dict(enumerate(class_weights))
 
 
-
                     print(" ..after reshape for LSTM (training): X_train inputs {0}, y_train targets {1}".format(X_train.shape, y_train.shape))
                     print(" ..after reshape for LSTM (testing): X_test inputs {0}, y_test targets {1}".format(X_test.shape, y_test.shape))
 
@@ -356,38 +291,6 @@ def read_save():
                     # patient early stopping
                     es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=500)
 
-
-                    '''
-                    ###  For fit_generator
-
-                    # Parameters
-                    params = {'dim': (4, 20,7),
-                              'batch_size': 128,
-                              'n_classes': 12,
-                              'n_channels': 1,
-                              'shuffle': False}
-
-                    XX_train, XX_validation, yy_train, yy_validation = train_test_split(X_train, y_train, test_size=0.2, random_state=0)
-                    Dic_XX_t = dict(zip(list(range(XX_train.shape[0])),list(XX_train)))
-                    Dic_XX_v = dict(zip(list(range(XX_validation.shape[0])), list(XX_validation)))
-                    Dic_yy_t = dict(zip(list(range(yy_train.shape[0])),list(yy_train)))
-                    Dic_yy_v = dict(zip(list(range(yy_validation.shape[0])), list(yy_validation)))
-
-                    # Generators
-                    training_generator = DataGenerator(list(range(XX_train.shape[0])), Dic_XX_t, Dic_yy_t, **params)
-                    validation_generator = DataGenerator(list(range(XX_validation.shape[0])), Dic_XX_v, Dic_yy_v, **params)
-
-                    # Train model on dataset
-                    history = model.fit_generator(generator=training_generator, validation_data=validation_generator, use_multiprocessing=True,  workers=6, epochs=EPOCH_SIZE,  verbose=1, callbacks=[es])
-                    '''
-
-
-
-                    #history = model.fit(X_train, y_train, batch_size=64, epochs=5, verbose=1, validation_data=(X_test, y_test))
-                    #history = model.fit(X_train, y_train, batch_size=BATCH_SIZE, epochs=600, verbose=1, validation_split=0.2, class_weight = d_class_weights )
-
-                    # class weight
-                    #history = model.fit(X_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCH_SIZE, verbose=1, validation_split=0.2, class_weight = d_class_weights, callbacks=[es])
                     # sample weight
                     history = model.fit(X_train, y_train, batch_size=BATCH_SIZE, epochs=EPOCH_SIZE, verbose=1, validation_split=0.2, sample_weight=generate_sample_weights(y_train, class_weight_dictionary),callbacks=[es])
                     pd.DataFrame(history.history).to_csv(outputdir + "6and2_" + Position[k] + "_" + str(fold_num) + "_train_history.csv")
@@ -402,9 +305,9 @@ def read_save():
                     matrix = metrics.confusion_matrix(y_test.argmax(axis=1), predictions.argmax(axis=1))
                     print(matrix)
 
-                    pd.DataFrame(score).to_csv(outputdir + "6and2_" + Position[k] + "_" + str(fold_num) + "_test_score.csv")
-                    pd.DataFrame(predictions).to_csv(outputdir + "6and2_" + Position[k] + "_" + str(fold_num) + "_y_predictions.csv")
-                    pd.DataFrame(y_test).to_csv(outputdir + "6and2_" + Position[k] + "_" + str(fold_num) + "_y_test.csv")
+                    pd.DataFrame(score).to_csv(outputdir + Position[k] + "_" + str(fold_num) + "_test_score.csv")
+                    pd.DataFrame(predictions).to_csv(outputdir + Position[k] + "_" + str(fold_num) + "_y_predictions.csv")
+                    pd.DataFrame(y_test).to_csv(outputdir + Position[k] + "_" + str(fold_num) + "_y_test.csv")
 
                     end = time.time()
                     print(end - start)
@@ -417,4 +320,3 @@ if __name__ == '__main__':
     set_session(tf.Session(config=config))
 
     Process = Process(target=read_save(), args=(), ).start()
-
