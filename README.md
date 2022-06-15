@@ -1,26 +1,5 @@
 # Toolkit-for-HBC-sensing
 This repository supplyies the basic concept of human body capacitance sening and the hardware platform, the firmware, the collected datasets from experiments that combines HBC sensing and IMU sensing for human activity recognition, and the used machine learning algorithms for human activity classification. 
-More detailed description could be found in our published paper:
-
-
-
-1， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
-
-Available at: https://bodynets.eai-conferences.org/2021/accepted-papers/
-
-Share and cite:
-
-2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
-
-Available at: https://abc-research.github.io/
-
-Share and cite: 
-
-3, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
-
-Available at: to be determined
-
-Share and cite: 
 
 
 # selected figures:
@@ -53,5 +32,49 @@ Gym Exercise classification result with sensing units on different body location
 <img width="292" alt="Screenshot 2021-10-05 at 14 23 21" src="https://user-images.githubusercontent.com/12549420/136021780-874b06c1-089b-4d96-9c78-fdc670fe4bfe.png" >
 
 TV-Wall building activities classification result with different configuration of sensing modalities.
+
+
+
+
+More detailed description could be found in our published paper:
+
+
+
+1， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
+
+Available at: https://link.springer.com/chapter/10.1007/978-3-030-95593-9_20
+
+Share and cite:
+@inproceedings{bian2021systematic,
+  title={A systematic study of the influence of various user specific and environmental factors on wearable human body capacitance sensing},
+  author={Bian, Sizhen and Lukowicz, Paul},
+  booktitle={EAI International Conference on Body Area Networks},
+  pages={247--274},
+  year={2021},
+  organization={Springer}
+}
+
+
+2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
+
+Available at: [https://abc-research.github.io/](https://link.springer.com/chapter/10.1007/978-981-19-0361-8_5)
+
+Share and cite: 
+@incollection{bian2022using,
+  title={Using human body capacitance sensing to monitor leg motion dominated activities with a wrist worn device},
+  author={Bian, Sizhen and Yuan, Siyu and Rey, Vitor Fortes and Lukowicz, Paul},
+  booktitle={Sensor-and Video-Based Activity and Behavior Computing},
+  pages={81--94},
+  year={2022},
+  publisher={Springer}
+}
+
+
+3, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
+
+Available at: to be determined
+
+Share and cite: 
+
 
 
