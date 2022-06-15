@@ -23,9 +23,19 @@ A TV-Wall assembling and disassembling activity including both collaborative and
 
 ## Classifcation Result Example
 
+### Gym Exercise Recognition: Random Forest with 615 abstracted features
+
 <img width="900" alt="Screenshot 2021-10-05 at 14 22 43" src="https://user-images.githubusercontent.com/12549420/136021710-d045e318-1fff-47cc-8626-19b3f9f696c9.png" >
 
 Gym Exercise classification result with sensing units on different body locations(pocket, leg, and wrist).
+
+
+### Gym Exercise Recognition: Deep models result
+
+<img width="741" alt="Screenshot 2022-06-15 at 11 14 01" src="https://user-images.githubusercontent.com/12549420/173791120-9f0ee57e-f1d6-4ffa-ab9e-3f6f92593887.png">
+
+
+### Collaborative Activity Recognition (TV-Wall)
 
 <img width="500" alt="Screenshot 2021-10-05 at 14 23 21" src="https://user-images.githubusercontent.com/12549420/136021780-874b06c1-089b-4d96-9c78-fdc670fe4bfe.png" >
 
