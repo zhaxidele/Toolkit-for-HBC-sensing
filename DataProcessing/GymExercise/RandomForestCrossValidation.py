@@ -1,4 +1,10 @@
 
+
+################################################################################################################################################
+# This code deals with a feature-acstraction finished data set, which has a too large volumn to be uploaded.  Contact the authors if you need it.
+################################################################################################################################################
+
+
 import matplotlib.pyplot as plt
 import csv
 import os
@@ -47,15 +53,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 
-Header_4 = ["TimeStamp", "Object", "Day", "Workout", "Workout_time", "Position"]
-Header_5 = ["Object", "Day", "Workout", "Workout_time", "Position"]
 
-Header_6 = ["LocalSerie", "ComTime", "MCUSerie", "MCUTime", "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "C_1", "Object", "Day", "Workout", "Workout_time", "Position"]
-Header_7 = ["LocalSerie", "ComTime", "MCUSerie", "MCUTime", "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "E_1", "E_2", "E_3", "C_1", "Object", "Day", "Workout", "Workout_time", "Position"]
-Header_8 = ["LocalSerie", "ComTime", "MCUSerie", "MCUTime", "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "Q_1", "Q_2", "Q_3", "Q_4", "C_1", "Object", "Day", "Workout", "Workout_time", "Position"]
-
-Name_dic = {1:'Chentianyu', 2:'Cuihaiyang', 3:'Dangfeng', 4:'Hanyue', 5:'Songshiqi', 6:'Wangxueying', 7:'Yanzehui', 8:'Yujia', 9:'Zhangyu', 10:'Zhangzeyu', 11:'Test'}
-Name_dic_r = {'Chentianyu':1, 'Cuihaiyang':2, 'Dangfeng':3, 'Hanyue':4, 'Songshiqi':5, 'Wangxueying':6, 'Yanzehui':7, 'Yujia':8, 'Zhangyu':9, 'Zhangzeyu':10, 'Test':11}
+Header_5 = ["Object", "Day", "Workout", "Sensor_Position",  "A_x", "A_y","A_z", "G_x", "G_y", "G_z", "Body_Capacitance"]
 
 
 #Feature_Cap = ['t_Cap_mean', 't_Cap_std', 't_Cap_mad', 't_Cap_min', 't_Cap_max', 't_Cap_energy', 't_Cap_iqr_range', 't_Cap_entropy', 't_Cap_AR_estimate_0', 't_Cap_AR_estimate_1', 't_Cap_AR_estimate_2', 't_Cap_AR_estimate_3', 'f_Cap_mean', 'f_Cap_std', 'f_Cap_mad', 'f_Cap_min', 'f_Cap_max', 'f_Cap_energy', 'f_Cap_iqr_range', 'f_Cap_entropy', 'f_Cap_maxindex', 'f_Cap_skewness', 'f_Cap_kurtosis', 'f_Cap__0', 'f_Cap__1', 'f_Cap__2', 'f_Cap__3', 'f_Cap__4', 'f_Cap__5', 'f_Cap__6', 'f_Cap__7', 'f_Cap__8', 'f_Cap__9', 't_Cap_Jerk_mean', 't_Cap_Jerk_std', 't_Cap_Jerk_mad', 't_Cap_Jerk_min', 't_Cap_Jerk_max', 't_Cap_Jerk_energy', 't_Cap_Jerk_iqr_range', 't_Cap_Jerk_entropy', 't_Cap_Jerk_AR_estimate_0', 't_Cap_Jerk_AR_estimate_1', 't_Cap_Jerk_AR_estimate_2', 't_Cap_Jerk_AR_estimate_3', 'f_Cap_Jerk_mean', 'f_Cap_Jerk_std', 'f_Cap_Jerk_mad', 'f_Cap_Jerk_min', 'f_Cap_Jerk_max', 'f_Cap_Jerk_energy', 'f_Cap_Jerk_iqr_range', 'f_Cap_Jerk_entropy', 'f_Cap_Jerk_maxindex', 'f_Cap_Jerk_skewness', 'f_Cap_Jerk_kurtosis', 'f_Cap_Jerk__0', 'f_Cap_Jerk__1', 'f_Cap_Jerk__2', 'f_Cap_Jerk__3', 'f_Cap_Jerk__4', 'f_Cap_Jerk__5', 'f_Cap_Jerk__6', 'f_Cap_Jerk__7', 'f_Cap_Jerk__8','f_Cap_Jerk__9']
@@ -88,30 +87,8 @@ y_test_all = []
 y_name = ""
 
 
-outputdir = "Data/" + "Combine_6/Figures/"
-outputdir_1 = "Data/" + "Combine_6/Y_data/"
-outputdir_20 = "Data/" + "Combine_6/Figures_Cap/"
-outputdir_30 = "Data/" + "Combine_6/Figures_IMU/"
-outputdir_21 = "Data/" + "Combine_6/Y_data_Cap/"
-outputdir_31 = "Data/" + "Combine_6/Y_data_IMU/"
-
-outputdir_22 = "Data/" + "Combine_6/Figures_Cap_New/"
-outputdir_23 = "Data/" + "Combine_6/Y_data_Cap_New/"
-outputdir_32 = "Data/" + "Combine_6/Figures_IMU_Cap_New_Depth15Tree100/"
-outputdir_33 = "Data/" + "Combine_6/Y_data_IMU_Cap_New_Depth15Tree100/"
-
-outputdir_40 = "Data/" + "Combine_6/Grid_Accuracy/"
-
-
-inputdir = "Data/" + "Combine_New_4/2021_Normalization/"
-outputdir_51 = "Data/" + "Combine_New_6/2021_Normalization/Y_Data/"
-outputdir_52 = "Data/" + "Combine_New_6/2021_Normalization/Figure_Data/"
-outputdir_53 = "Data/" + "Combine_New_6/2021_Normalization/Y_Data_Cap/"
-outputdir_54 = "Data/" + "Combine_New_6/2021_Normalization/Figure_Data_Cap/"
-outputdir_55 = "Data/" + "Combine_New_6/2021_Normalization/Y_Data_IMU/"
-outputdir_56 = "Data/" + "Combine_New_6/2021_Normalization/Figure_Data_IMU/"
-
-
+outputdir = "Data/"
+inputdir = "Data/" 
 
 
 def define_models(depth, tree_num):
@@ -432,4 +409,3 @@ def read_save():
 if __name__ == '__main__':
     Process = Process(target=read_save(), args=(), ).start()
     #Process = Process(target=read_save_2021_01(), args=(), ).start()
-
