@@ -80,11 +80,17 @@ Share and cite:
 }
 
 
-3, Human Body Capacitance: a Novel Wearable MotionSensing Approach Besides IMU and its Contributionto Human Activity Recognition
+3, The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition
 
-Available at: to be determined
+Available at: https://arxiv.org/abs/2210.14794
 
 Share and cite: 
 
+@article{bian2022contribution,
+  title={The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition},
+  author={Bian, Sizhen and Rey, Vitor Fortes and Yuan, Siyu and Lukowicz, Paul},
+  journal={arXiv preprint arXiv:2210.14794},
+  year={2022}
+}
 
 
