@@ -44,24 +44,24 @@ TV-Wall building activities classification result with different configuration o
 
 
 
-### More detailed description could be found in our published paper:
+### More detailed description could be found in our papers:
 
 
 
-1， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
+1, **The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition**
 
-Available at: https://link.springer.com/chapter/10.1007/978-3-030-95593-9_20
+Available at: https://arxiv.org/abs/2210.14794
 
-Share and cite:
+Share and cite: 
 
-@inproceedings{bian2021systematic,
-  title={A systematic study of the influence of various user specific and environmental factors on wearable human body capacitance sensing},
-  author={Bian, Sizhen and Lukowicz, Paul},
-  booktitle={EAI International Conference on Body Area Networks},
-  pages={247--274},
-  year={2021},
-  organization={Springer}
+@article{bian2022contribution,
+  title={The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition},
+  author={Bian, Sizhen and Rey, Vitor Fortes and Yuan, Siyu and Lukowicz, Paul},
+  journal={arXiv preprint arXiv:2210.14794},
+  year={2022}
 }
+
+
 
 
 2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
@@ -80,17 +80,21 @@ Share and cite:
 }
 
 
-3, The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition
 
-Available at: https://arxiv.org/abs/2210.14794
+3， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
 
-Share and cite: 
+Available at: https://link.springer.com/chapter/10.1007/978-3-030-95593-9_20
 
-@article{bian2022contribution,
-  title={The Contribution of Human Body Capacitance/Body-Area Electric Field To Individual and Collaborative Activity Recognition},
-  author={Bian, Sizhen and Rey, Vitor Fortes and Yuan, Siyu and Lukowicz, Paul},
-  journal={arXiv preprint arXiv:2210.14794},
-  year={2022}
+Share and cite:
+
+@inproceedings{bian2021systematic,
+  title={A systematic study of the influence of various user specific and environmental factors on wearable human body capacitance sensing},
+  author={Bian, Sizhen and Lukowicz, Paul},
+  booktitle={EAI International Conference on Body Area Networks},
+  pages={247--274},
+  year={2021},
+  organization={Springer}
 }
+
 
 
