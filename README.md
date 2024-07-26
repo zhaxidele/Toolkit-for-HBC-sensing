@@ -62,39 +62,3 @@ Share and cite:
 }
 
 
-
-
-2, Using Human Body Capacitance Sensing to Monitor Leg Motion Dominated Activities with a Wrist Worn Device
-
-Available at: https://link.springer.com/chapter/10.1007/978-981-19-0361-8_5
-
-Share and cite: 
-
-@incollection{bian2022using,
-  title={Using human body capacitance sensing to monitor leg motion dominated activities with a wrist worn device},
-  author={Bian, Sizhen and Yuan, Siyu and Rey, Vitor Fortes and Lukowicz, Paul},
-  booktitle={Sensor-and Video-Based Activity and Behavior Computing},
-  pages={81--94},
-  year={2022},
-  publisher={Springer}
-}
-
-
-
-3， A systematic study of the influence of various user specific and environmental factors on wearable Human Body Capacitance sensing
-
-Available at: https://link.springer.com/chapter/10.1007/978-3-030-95593-9_20
-
-Share and cite:
-
-@inproceedings{bian2021systematic,
-  title={A systematic study of the influence of various user specific and environmental factors on wearable human body capacitance sensing},
-  author={Bian, Sizhen and Lukowicz, Paul},
-  booktitle={EAI International Conference on Body Area Networks},
-  pages={247--274},
-  year={2021},
-  organization={Springer}
-}
-
-
-
