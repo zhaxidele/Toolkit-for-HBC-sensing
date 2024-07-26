@@ -23,6 +23,11 @@ A TV-Wall assembling and disassembling activity including both collaborative and
 
 ## Classifcation Result Example
 
+### Gym Exercise Recognition: Hybrid CNN-Dilated-Attention model
+
+![Screenshot from 2024-07-26 12-16-01](https://github.com/user-attachments/assets/ddefb1fd-dcbe-48ce-8c53-f01cd75607bc)
+
+
 ### Gym Exercise Recognition: Random Forest with 615 abstracted features
 
 <img width="900" alt="Screenshot 2021-10-05 at 14 22 43" src="https://user-images.githubusercontent.com/12549420/136021710-d045e318-1fff-47cc-8626-19b3f9f696c9.png" >
