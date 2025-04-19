@@ -4,6 +4,9 @@
 **RecGym** dataset could be downloaded here: 
 https://www.kaggle.com/datasets/zhaxidelebsz/10-gym-exercises-with-615-abstracted-features
 
+And introduced here:
+https://zhaxidele.github.io/RecGym/
+
 Data structure: 
 
 Subject: 10 volunteers
