@@ -14,6 +14,7 @@ The schematic and geber files can be found in the Hardware directory. PCB/Protot
 <img width="450" alt="Calos_Gym" src="https://user-images.githubusercontent.com/12549420/136020221-a32689d2-7c01-42a5-8b1c-68694b6b18b8.png" >
 
 11 gym exercises: Adductor, Armcurl, Benchpress, Legcurl, Legpress, Riding, Ropeskipping, Running, Squat, Stairsclimber and Walking
+Dataset: https://zhaxidele.github.io/RecGym/
 
 ## TV-Wall Assembling and Dissembling
 
